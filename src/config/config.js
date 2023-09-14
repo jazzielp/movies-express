@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'prod') {
 }
 
 export const config = {
-  port: process.env.PORT,
+  port: process.env.SERVER_PORT,
   dbHost: process.env.DB_HOST,
   dbUser: process.env.DB_USER,
   dbPassword: process.env.DB_PASSWORD,
