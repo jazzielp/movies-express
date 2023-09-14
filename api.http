@@ -1,0 +1,34 @@
+###Recover all movies
+GET http://localhost:3000/movies
+
+###Recover a movie by id
+GET http://localhost:3000/movies/1
+
+###Recover a movie by genre
+GET http://localhost:3000/movies?genre=Action
+
+###Create a movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": ["Drama"],
+  "rate": 9.3
+}
+
+###Update a movie
+PUT http://localhost:3000/movies/1
+Content-Type: application/json
+
+{
+  "title": "The Shawshank Redemption Edited",
+  "year": 1995,
+}
+
+###Delete a movie
+DELETE http://localhost:3000/movies/1
