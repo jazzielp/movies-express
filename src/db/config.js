@@ -1,16 +1,16 @@
-import { config } from './config/config.js'
+const { config } = require('../config/config.js')
 
 const USER = encodeURIComponent(config.dbUser)
 const PASSWORD = encodeURIComponent(config.dbPassword)
 
 const URL = `mysql://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`
 
-export const configSequelize = {
+module.exports = {
   development: {
     url: URL,
     dialect: 'mysql'
   },
-  peoduction: {
+  production: {
     url: URL,
     dialect: 'mysql'
   }

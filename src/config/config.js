@@ -1,4 +1,4 @@
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 
 if (process.env.NODE_ENV === 'prod') {
   dotenv.config({
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'prod') {
   })
 }
 
-export const config = {
+const config = {
   port: process.env.SERVER_PORT,
   dbHost: process.env.DB_HOST,
   dbUser: process.env.DB_USER,
@@ -23,3 +23,5 @@ export const config = {
   dbPort: process.env.DB_PORT,
   jwtSecret: process.env.JTW_SECRET
 }
+
+module.exports = { config }
