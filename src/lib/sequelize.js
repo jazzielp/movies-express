@@ -1,8 +1,7 @@
 const { Sequelize } = require('sequelize')
 
 const { config } = require('../config/config')
-
-const setupModels = require('../models')
+const setupModels = require('../db/models')
 
 const USER = encodeURIComponent(config.dbUser)
 const PASSWORD = encodeURIComponent(config.dbPassword)
@@ -11,7 +10,7 @@ const URL = `mysql://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${con
 
 const sequelize = new Sequelize(URL, {
   dialect: 'mysql',
-  logging: false
+  logging: true
 })
 
 setupModels(sequelize)

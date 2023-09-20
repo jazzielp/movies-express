@@ -34,10 +34,6 @@ const MovieSchema = {
     allowNull: false,
     type: DataTypes.STRING
   },
-  genre: {
-    allowNull: false,
-    type: DataTypes.ARRAY(DataTypes.STRING)
-  },
   rate: {
     allowNull: false,
     type: DataTypes.FLOAT
@@ -72,4 +68,4 @@ class Movie extends Model {
   }
 }
 
-module.exports = { MovieSchema, Movie, MOVIE_TABLE }
+module.exports = { Movie, MovieSchema, MOVIE_TABLE }
