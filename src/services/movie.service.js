@@ -9,7 +9,7 @@ class MovieService {
     return await models.Movie.findByPk(id)
   }
 
-  async creat (data) {
+  async create (data) {
     return await models.Movie.create(data)
   }
 
