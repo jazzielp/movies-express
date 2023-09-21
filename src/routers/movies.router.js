@@ -30,7 +30,7 @@ router.post('/', async (req, res, next) => {
   })
 })
 
-router.put('/:id', async (req, res, next) => {
+router.patch('/:id', async (req, res, next) => {
   const { id } = req.params
   const { body } = req
   const updatedMovie = await movieService.update(id, body)

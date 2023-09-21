@@ -1,14 +1,14 @@
 ###Recover all movies
-GET http://localhost:3000/movies
+GET http://localhost:3000/api/movies
 
 ###Recover a movie by id
-GET http://localhost:3000/movies/1
+GET http://localhost:3000/api/movies/1
 
 ###Recover a movie by genre
-GET http://localhost:3000/movies?genre=Action
+GET http://localhost:3000/api/movies?genre=Action
 
 ###Create a movie
-POST http://localhost:3000/movies
+POST http://localhost:3000/api/movies
 Content-Type: application/json
 
 {
@@ -22,13 +22,13 @@ Content-Type: application/json
 }
 
 ###Update a movie
-PUT http://localhost:3000/movies/1
+PATCH  http://localhost:3000/api/movies/1
 Content-Type: application/json
 
 {
   "title": "The Shawshank Redemption Edited",
-  "year": 1995,
+  "year": 1995
 }
 
 ###Delete a movie
-DELETE http://localhost:3000/movies/1
+DELETE http://localhost:3000/api/movies/1
