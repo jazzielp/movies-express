@@ -1,0 +1,24 @@
+###Recover all genres
+GET http://localhost:3000/api/genres
+
+###Recover a genre by id
+GET http://localhost:3000/api/genres/1
+
+###Create a genre
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+
+{
+  "name": "Drama"
+}
+
+###Update a genre
+PATCH http://localhost:3000/api/genres/1
+Content-Type: application/json
+
+{
+  "name": "Drama Edited"
+}
+
+###Delete a genre
+DELETE http://localhost:3000/api/genres/1
