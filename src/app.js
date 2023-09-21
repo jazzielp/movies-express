@@ -7,7 +7,7 @@ const { errorHandler, logError } = require('./middlewares/error.handler.js')
 const app = express()
 
 const port = config.port
-
+app.use(express.json())
 app.get('/', (req, res) => res.send('Hello World!'))
 routerApi(app)
 
