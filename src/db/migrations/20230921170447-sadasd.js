@@ -1,3 +1,4 @@
+'use strict'
 const { MovieSchema, MOVIE_TABLE } = require('../models/movies.model')
 
 /** @type {import('sequelize-cli').Migration} */

@@ -1,10 +1,9 @@
 const dotenv = require('dotenv')
-
-if (process.env.NODE_ENV === 'prod') {
+if (process.env.NODE_ENV === 'production') {
   dotenv.config({
     path: '.production.env'
   })
-} else if (process.env.NODE_ENV === 'dev') {
+} else if (process.env.NODE_ENV === 'development') {
   dotenv.config({
     path: '.development.env'
   })

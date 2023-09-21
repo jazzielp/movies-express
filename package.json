@@ -6,10 +6,11 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --verbose --silent --detectOpenHandles",
     "test:watch": "npm run test -- --watchAll",
-    "dev": "cross-env NODE_ENV=dev nodemon src/app.js",
-    "start": "cross-env NODE_ENV=prod node src/app.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/app.js",
+    "start": "cross-env NODE_ENV=production node src/app.js",
     "migrations:gen": "sequelize-cli migration:generate --name",
     "migrations:run": "sequelize-cli db:migrate",
+    "migrations:run-dev": "cross-env NODE_ENV=development sequelize-cli db:migrate",
     "migrations:undo": "sequelize-cli db:migrate:undo",
     "migrations:undo:all": "sequelize-cli db:migrate:undo:all"
   },
