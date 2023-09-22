@@ -1,4 +1,6 @@
 const { DataTypes, Sequelize, Model } = require('sequelize')
+const { MOVIE_TABLE } = require('../models/movies.model')
+const { GENRE_TABLE } = require('../models/genres.model')
 
 const MOVIE_GENRE_TABLE = 'movie_genre'
 
@@ -6,12 +8,26 @@ const MovieGenreSchema = {
   movieId: {
     allowNull: false,
     type: DataTypes.INTEGER,
-    field: 'movie_id'
+    field: 'movie_id',
+    primaryKey: true,
+    references: {
+      model: MOVIE_TABLE,
+      key: 'id'
+    },
+    onUpdate: 'CASCADE',
+    onDelete: 'CASCADE'
   },
   genreId: {
     allowNull: false,
     type: DataTypes.INTEGER,
-    field: 'genre_id'
+    field: 'genre_id',
+    primaryKey: true,
+    references: {
+      model: GENRE_TABLE,
+      key: 'id'
+    },
+    onUpdate: 'CASCADE',
+    onDelete: 'CASCADE'
   },
   createdAt: {
     allowNull: false,
@@ -36,7 +52,8 @@ class MovieGenre extends Model {
       sequelize,
       tableName: MOVIE_GENRE_TABLE,
       modelName: 'MovieGenre',
-      timestamps: false
+      timestamps: false,
+      primaryKey: ['movieId', 'genreId']
     }
   }
 }

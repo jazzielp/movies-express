@@ -9,7 +9,7 @@ const routerApi = (app) => {
   app.use('/api', router)
   router.use('/movies', movieRouter)
   router.use('/genres', genreRouter)
-  router.use('/movie-genres', movieGenreRouter)
+  router.use('/movie-genre', movieGenreRouter)
 }
 
 module.exports = routerApi
