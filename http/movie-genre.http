@@ -1,0 +1,26 @@
+###Recover all movie by genre
+GET http://localhost:8080/api/movie-genre
+
+###Recover all movie genre by movie id
+GET http://localhost:8080/api/movie-genre/1
+
+###Create movie genre
+POST http://localhost:8080/api/movie-genre/
+Content-Type: application/json
+
+{
+    "movieId": 1,
+    "genreId": 1
+}
+
+###Update movie genre
+PUT http://localhost:8080/api/movie-genre/1
+Content-Type: application/json
+
+{
+    "movieId": 1,
+    "genreId": 1
+}
+
+###Delete movie genre
+DELETE http://localhost:8080/api/movie-genre/1
