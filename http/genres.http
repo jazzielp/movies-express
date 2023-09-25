@@ -9,7 +9,7 @@ POST http://localhost:3000/api/genres
 Content-Type: application/json
 
 {
-  "name": "Crime"
+  "name": "Fantasy"
 }
 
 ###Update a genre
