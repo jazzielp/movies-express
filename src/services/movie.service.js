@@ -10,7 +10,12 @@ class MovieService {
   }
 
   async create (data) {
-    return await models.Movie.create(data)
+    const { genre } = data
+    const movie = await models.Movie.create(data)
+    genre.forEach(element => {
+      this.createMovieGenre(movie.id, element)
+    })
+    return movie
   }
 
   async update (id, data) {
@@ -21,6 +26,15 @@ class MovieService {
   async delete (id) {
     const movie = await models.Movie.findByPk(id)
     return await movie.destroy()
+  }
+
+  async createMovieGenre (movieId, genreName) {
+    const movie = await models.Movie.findByPk(movieId)
+    const genre = await models.Genre.findOne({ where: { name: genreName } })
+    if (!movie || !genre) {
+      return null
+    }
+    return await models.MovieGenre.create({ movieId, genreId: genre.id })
   }
 }
 

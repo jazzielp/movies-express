@@ -1,6 +1,5 @@
 'use strict'
 const { MovieGenreSchema, MOVIE_GENRE_TABLE } = require('../models/movie_genre.model')
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
