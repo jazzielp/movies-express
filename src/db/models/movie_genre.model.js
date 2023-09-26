@@ -45,7 +45,8 @@ const MovieGenreSchema = {
 }
 
 class MovieGenre extends Model {
-  static associate (models) {}
+  static associate (models) {
+  }
 
   static config (sequelize) {
     return {

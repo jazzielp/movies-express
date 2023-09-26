@@ -6,7 +6,9 @@ class MovieService {
   }
 
   async findById (id) {
-    return await models.Movie.findByPk(id)
+    return await models.Movie.findByPk(id, {
+      include: 'genres'
+    })
   }
 
   async create (data) {

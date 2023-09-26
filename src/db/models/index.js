@@ -5,6 +5,8 @@ const setupModels = (sequelize) => {
   Movie.init(MovieSchema, Movie.config(sequelize))
   Genre.init(GenreSchema, Genre.config(sequelize))
   MovieGenre.init(MovieGenreSchema, MovieGenre.config(sequelize))
+  Movie.associate(sequelize.models)
+  Genre.associate(sequelize.models)
 }
 
 module.exports = setupModels

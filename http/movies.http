@@ -12,13 +12,13 @@ POST http://localhost:3000/api/movies
 Content-Type: application/json
 
 {
-  "title": "The Dark Knight",
-  "year": 2008,
-  "director": "Christopher Nolan",
-  "duration": 152,
-  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
-  "genre": ["Action", "Crime", "Drama"],
-  "rate": 9.0
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": ["Drama"],
+  "rate": 9.3
 }
 
 ###Update a movie
